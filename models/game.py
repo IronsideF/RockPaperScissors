@@ -15,4 +15,7 @@ class Game:
         elif self.player2.choice == game_rules[self.player1.choice]:
             winning_player = self.player1
         
-        return f"{winning_player.name} wins by playing {winning_player.choice}"
+        if winning_player is not None:
+            return f"{winning_player.name} wins by playing {winning_player.choice}"
+        else:
+            return f"{winning_player} wins, it's a draw!"
