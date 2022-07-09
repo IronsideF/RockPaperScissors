@@ -7,10 +7,10 @@ from models.player import Player
 def index():
     return render_template('index.html')
 
-@app.route('/<player1choice>/<player2choice>', methods=['POST'])
+@app.route("/result", methods=['POST'])
 def game_played():
     player_1 = Player('Player 1', request.form['player1choice'])
     player_2 = Player('Player 2', request.form['player2choice'])
     live_game = Game(player_1, player_2)
-    return live_game.play_game()
+    return render_template('result.html', game=live_game, winner=live_game.play_game())
 
