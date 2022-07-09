@@ -14,3 +14,6 @@ def game_played():
     live_game = Game(player_1, player_2)
     return render_template('result.html', game=live_game, winner=live_game.play_game())
 
+@app.route('/welcome')
+def welcome():
+    return render_template('welcome.html')
