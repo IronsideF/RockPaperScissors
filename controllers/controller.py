@@ -17,3 +17,16 @@ def game_played():
 @app.route('/welcome')
 def welcome():
     return render_template('welcome.html')
+
+@app.route('/play')
+def play():
+    return render_template('play.html')
+
+@app.route('/play', methods=['POST'])
+def play_game():
+    player_1 = Player(request.form['name'], request.form['choice'])
+    player_2 = None
+    comp_game = Game(player_1, player_2)
+    player_2 = comp_game.generate_computer_player()
+    comp_game = Game(player_1, player_2)
+    return render_template('result.html', game=comp_game, winner=comp_game.play_game())
