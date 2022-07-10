@@ -1,0 +1,74 @@
+:root {
+    --background-color: #D9D0DE;
+    --text-color: #471f2b;
+    --header-color: #AB4967;
+    --border-color: #A04668;
+    --standout-color: #BC8DA0;
+}
+
+body {
+    font-family: 'Finlandica', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+header {
+    background-color: var(--header-color);
+    color: var(--background-color);
+    margin: 0;
+    height: 4rem;
+    padding-left: 5px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+header nav a {
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--background-color)
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--standout-color);
+}
+
+.input-form form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 10px;
+}
+
+.go-button {
+    background-color: var(--standout-color);
+    border: var(--border-color), solid, 1px;
+    margin-top: 10px;
+}
+.result {
+    background-color: var(--standout-color);
+    width: 30%;
+    margin-left: 16px;
+    padding: 16px;
+}
+
+.welcome {
+    background-color: var(--standout-color);
+    width: fit-content;
+    padding: 16px;
+}
+
+.welcome ul {
+    list-style: none;
+}
